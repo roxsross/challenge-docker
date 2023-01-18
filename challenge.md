@@ -6,6 +6,11 @@ MundoSE, solicita al Equipo de DevOps Trainer, la contenerizacion de su aplicaci
 - APP
 - Consumer
 
+```
+Version de Python Soportada:
+python:3.8-alpine
+python:3.10.8-alpine
+```
 Este ejemplo crea una API basica de `flask`, con un consumidor que accede desde el service a la API. 
 
 La Aplicacion se expone en el puerto port: 8000, ademas para que el consumidor lo pueda tomar es necesario que el contenedor se llame service-flask-app
@@ -27,6 +32,7 @@ El consumidor requiere esta variable de entorno
 - Crear el Dockerfile de la APP y Consumer
 - Crear el Docker-Compose
 - Push de la imagen en el Registry de Docker-hub
+- Apunta a las buenas practicas
 - Puedes Desplegar ambas aplicaciones usando en Lets Play Docker, Killercoda, EC2, etc
 
 
