@@ -20,6 +20,7 @@ El consumidor requiere esta variable de entorno
           env:
             - name: PYTHONUNBUFFERED
               value: "1"
+            - LOCAL: 'true'    
 ```    
 
 **Requisitos**
