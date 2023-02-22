@@ -28,9 +28,8 @@ jobs:
       - name: docker build
         run: |
           DIR=/home/runner/work/challenge-docker/challenge-docker
-          cd $DIR/src
-          ls
-          #docker build -t $REGISTRY/$REPOSITORY:1.0.0-app .
-          #docker push $REGISTRY/$REPOSITORY:1.0.0-app
+          cd $DIR/src/app
+          docker build -t $REGISTRY/$REPOSITORY:1.0.0-app .
+          docker push $REGISTRY/$REPOSITORY:1.0.0-app
 
       
