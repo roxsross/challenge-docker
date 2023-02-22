@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  
+  app:
+    container_name: service-flask-app
+    build: ./app
+    ports:
+      - 8000:8000
+    depends_on:
+      - consumer
+    networks:
+      - python_net 
+
+  consumer:
+    container_name: consumer
+    build: ./consumer
+    environment:
+      LOCAL: 'true'
+      PYTHONUNBUFFERED: 1
+    networks:
+      - python_net 
+
+networks:
+  python_net:
+    driver: bridge
