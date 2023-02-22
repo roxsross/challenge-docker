@@ -27,10 +27,9 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: docker build
         run: |
-          ls -lrt
-          cd /src/app
           pwd
-          docker build -t $REGISTRY/$REPOSITORY:1.0.0-app .
-          docker push $REGISTRY/$REPOSITORY:1.0.0-app
+          ls
+          #docker build -t $REGISTRY/$REPOSITORY:1.0.0-app .
+          #docker push $REGISTRY/$REPOSITORY:1.0.0-app
 
       
